@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Gestion-Courses{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "styles/main.css" %}">
+    <link rel="stylesheet" href="{% static 'global.css' %}">
+</head>
+<body>
+    <nav>
+        <!-- Barre de navigation -->
+        <ul>
+            <li><a href="{% url 'course:index' %}">Accueil</a></li>
+            <li><a href="{% url "course:addshop" %}">Créer Liste</a></li>
+            <li><a href="{% url "course:addarticle" %}">Créer Article</a></li>
+            <!-- Autres liens de navigation -->
+        </ul>
+    </nav>
+    
+    <div class="sidebar">
+        <!-- Barre latérale -->
+        <ul>
+            <li><a href="{% url 'course:index' %}">Accueil</a></li>
+            <li><a href="{% url "course:userprofil" %}">Profil</a></li>
+            <li><a href="">Autres</a></li>
+            <!-- Autres liens de navigation -->
+        </ul>
+        <!-- Contenu de la sidebar -->
+    </div>
+
+    <div class="content">
+        <!-- Contenu spécifique à chaque page -->
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="foot-containt">
+      <!--  <footer>Copyright -</footer>   -->
+    </div>
+</body>
+</html>

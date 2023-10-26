@@ -1,0 +1,108 @@
+/* style.css */
+
+/* Style de base pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style de la barre de navigation */
+nav {
+    background-color: #8ebbf5;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+/* Style de la barre latérale */
+.sidebar {
+    background-color: #f0f5f8;
+    color: #fff;
+    padding: 10px;
+    width: 50px;
+    float: left;
+    font: bold;
+}
+
+/* Style du contenu principal */
+.content {
+    padding: 20px;
+    margin-left: 220px; /* Pour laisser de la place à la sidebar */
+    background-color: #fff;
+}
+
+/* Style pour les titres de page */
+h1 {
+    color: #333;
+}
+
+/* Autres styles spécifiques à votre application */
+
+/* Par exemple, vous pouvez ajouter des styles pour les formulaires, les boutons, etc. */
+
+
+
+/*=========================PROFIL =================================================  */
+/* Profile.css */
+
+/* Style pour le conteneur du profil */
+.profile-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Style pour le titre du profil */
+.profile-container h1 {
+    color: #333;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Style pour les informations de l'utilisateur */
+.user-info {
+    margin-top: 20px;
+}
+
+.user-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Ajoutez d'autres styles personnalisés selon vos besoins */
+/*=========================ARTICLES =================================================  */
+.articlename {
+    font-size: large;
+    font-weight: bold;
+}
+
+.storename{
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.deletearticle {
+    color: rgb(240, 8, 8);
+   /*  font-style: oblique;*/
+} 

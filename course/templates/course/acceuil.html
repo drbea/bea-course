@@ -1,0 +1,37 @@
+{% extends "course/base.html" %}
+
+{% block title %}Accueil - Gestion-
+Liste{% endblock %}
+
+{% block content %}
+    <h1>Bienvenu sur GestCourse</h1>
+    <div>
+        <p>L'application qui vous permet de gerer vos articles de courses</p>
+    </div>
+    <!-- Contenu spécifique à la page d'accueil -->
+
+    <div class = "display-article">
+        <table>
+            <tr>
+                <th> Article Name </th>
+                <th> Quantities </th>
+                <th> Store </th>
+                <th colspan = "2"> Actions </th>
+            </tr>
+            {% for article in articles %}
+                <tr>
+                    <td class="articlename">
+                        <a href="{% url 'course:showarticle' article.id %}"> {{ article.articleName}} </a></td>
+                    <td> {{ article.quantity}} </td>
+                    <td class="storename"> {{article.shop}} </td>
+                    <td> 
+                        <a href={% url "course:updateArticleName" article.id %}>update</a> </td>
+                    <td>   <a class="deletearticle" href="{% url "course:delete_article" article.id %}" >X</a> </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    
+
+
+{% endblock %}

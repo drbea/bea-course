@@ -1,0 +1,138 @@
+{% extends "course/base.html" %}
+
+{% block content %}
+
+<h1  >Nom de L'article: {{ article.articleName}} </h1>
+<p> Quantities: {{ article.quantity }} </p>
+<p> Magasin:  {{article.shop}} </p>
+
+<p>
+    <a href= "{% url 'course:index' %}"> return to articles articles list</a>
+</p>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %} 
+
+
+
+    <p> {{ message|length }} caractere dans {{message}}</p> ///filtrer: compter le nommbre de caractere
+    <p> {{ message|wordcount }} mots dans {{message}}</p> ///filtrer: compter le nommbre de mots
+    <p> {{ message| upper }} </p> ///filtrer: compter le nommbre de mots
+    <p> nous somme le  {{ pubplicationDate1}} </p>
+    <p> nous somme le  {{ pubplicationDate1|date:"d/m/Y"}} </p>
+    <p> il est   {{ pubplicationDate1|time:"H\h:i"}} </p>
+   ///pour avoir un decalage entre deux date
+    <p> {{pubplicationDate1|timesince:pubplicationDate1}}
+
+    {% if numnberOfNews > 0 %}
+        <p>{{numnberOfNews}} actualit{{numnberOfNews|pluralize:"y,ies"}} avalailabe{{numnberOfNews|pluralize}} </p>
+    {% else %}
+        <p>Pas de News...</p>
+    {% endif %}
+    <p> {{"Salut"|first_char }} </p>
+    <p>{% greetPerson username %}
+
+    afficher la date
+    {% now "d-m-Y H:i" %}  ///ecrie le format 12-10-22023
+    {% now "DATE_FORMAT" %} ///ecrie le format Oct. 17, 2023
+
+    utlisation des boucles
+    <ul>
+        {% for user  in  userslist %} 
+            <li> {{user}} </li>
+        {% endfor %}
+    </ul>
+
+    balise de debugage 
+    {% debug %}
+{% endcomment %}
+{% comment %}  <div>
+        <h2>Acceuil</h2>
+
+        <h2> contenu d'un autre fichier </h2>
+        {% include "./other.html" %} 
+     balise lorem :ecire du text aleatoire avec   terminaison automatique par django 
+    {% lorem 1 b random %}  
+    </div>
+    <a href="#">info</a>
+    </body>
+</html>  {% endcomment %}
